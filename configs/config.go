@@ -28,7 +28,7 @@ func (c *Config)initConfig() error  {
 	replacer := strings.NewReplacer(".","_")
 	viper.SetEnvKeyReplacer(replacer)
 
-	if err := viper.ReadConfig();err != nil {
+	if err := viper.ReadInConfig();err != nil {
 		return err
 	}
 
@@ -43,15 +43,33 @@ func (c *Config)watchConfig()  {
 	
 }
 
+func (c *Config)initLog()  {
+	passLagerCfg := log.PassLagerCfg {
+		Writers:        viper.GetString("log.writers"),
+		LoggerLevel:    viper.GetString("log.logger_level"),
+		LoggerFile:     viper.GetString("log.logger_file"),
+		LogFormatText:  viper.GetBool("log.log_format_text"),
+		RollingPolicy:  viper.GetString("log.rollingPolicy"),
+		LogRotateDate:  viper.GetInt("log.log_rotate_date"),
+		LogRotateSize:  viper.GetInt("log.log_rotate_size"),
+		LogBackupCount: viper.GetInt("log.log_backup_count"),
+	}
+	log.InitWithConfig(&passLagerCfg)
+}
+
 func Init(cfg string) error  {
 
 	c := Config{
 		Name: cfg,
 	}
 
+	// 初始化日志包
 	if err := c.initConfig();err != nil {
 		return err
 	}
+
+	// 初始化日志文件
+	c.initLog()
 
 	c.watchConfig()
 

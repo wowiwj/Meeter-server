@@ -1,0 +1,19 @@
+{"level":"ERROR","timestamp":"2018-08-09 16:34:09.970","file":"models/init.go:32","msg":"Database connection failed. Database name: meeter","data":{"error":"invalid DSN: did you forget to escape a param value?"}}
+{"level":"ERROR","timestamp":"2018-08-09 16:34:09.972","file":"models/init.go:32","msg":"Database connection failed. Database name: meeter","data":{"error":"invalid DSN: did you forget to escape a param value?"}}
+{"level":"INFO","timestamp":"2018-08-09 16:34:09.972","file":"Meeter/main.go:49","msg":"Start to listening the incoming requests on http address: :8088"}
+{"level":"ERROR","timestamp":"2018-08-09 16:35:03.205","file":"models/init.go:32","msg":"Database connection failed. Database name: meeter","data":{"error":"invalid DSN: did you forget to escape a param value?"}}
+{"level":"ERROR","timestamp":"2018-08-09 16:35:03.206","file":"models/init.go:32","msg":"Database connection failed. Database name: meeter","data":{"error":"invalid DSN: did you forget to escape a param value?"}}
+{"level":"INFO","timestamp":"2018-08-09 16:35:03.206","file":"Meeter/main.go:49","msg":"Start to listening the incoming requests on http address: :8088"}
+{"level":"INFO","timestamp":"2018-08-09 16:35:03.206","file":"Meeter/main.go:50","msg":"listen tcp :8088: bind: address already in use"}
+{"level":"ERROR","timestamp":"2018-08-09 16:36:32.652","file":"models/init.go:32","msg":"Database connection failed. Database name: meeter","data":{"error":"Error 1045: Access denied for user 'root'@'58.212.192.78' (using password: YES)"}}
+{"level":"ERROR","timestamp":"2018-08-09 16:36:32.769","file":"models/init.go:32","msg":"Database connection failed. Database name: meeter","data":{"error":"Error 1045: Access denied for user 'root'@'58.212.192.78' (using password: YES)"}}
+{"level":"INFO","timestamp":"2018-08-09 16:36:32.769","file":"Meeter/main.go:49","msg":"Start to listening the incoming requests on http address: :8088"}
+{"level":"INFO","timestamp":"2018-08-09 16:36:32.769","file":"Meeter/main.go:50","msg":"listen tcp :8088: bind: address already in use"}
+{"level":"INFO","timestamp":"2018-08-09 16:39:04.554","file":"configs/config.go:41","msg":"Config file changed: /Users/wangju/go/src/Meeter/.env.yaml"}
+{"level":"INFO","timestamp":"2018-08-09 16:39:12.770","file":"Meeter/main.go:49","msg":"Start to listening the incoming requests on http address: :8088"}
+{"level":"INFO","timestamp":"2018-08-09 16:39:12.771","file":"Meeter/main.go:50","msg":"listen tcp :8088: bind: address already in use"}
+{"level":"INFO","timestamp":"2018-08-09 16:39:47.095","file":"configs/config.go:41","msg":"Config file changed: /Users/wangju/go/src/Meeter/.env.yaml"}
+{"level":"INFO","timestamp":"2018-08-09 16:39:49.512","file":"Meeter/main.go:49","msg":"Start to listening the incoming requests on http address: :8088"}
+{"level":"INFO","timestamp":"2018-08-09 16:39:49.513","file":"Meeter/main.go:50","msg":"listen tcp :8088: bind: address already in use"}
+{"level":"INFO","timestamp":"2018-08-09 16:40:08.235","file":"configs/config.go:41","msg":"Config file changed: /Users/wangju/go/src/Meeter/.env.yaml"}
+{"level":"INFO","timestamp":"2018-08-09 16:40:11.978","file":"Meeter/main.go:49","msg":"Start to listening the incoming requests on http address: :8098"}
