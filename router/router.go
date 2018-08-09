@@ -5,14 +5,21 @@ import (
 	"net/http"
 )
 
-func Init() *gin.Engine  {
-	router := gin.Default()
+func Load(g *gin.Engine,mw ...gin.HandlerFunc) *gin.Engine {
 
-	router.GET("/ping", func(context *gin.Context) {
-		context.JSON(http.StatusOK,gin.H{
-			"message": "pong",
+	g.Use(gin.Recovery())
+
+	g.Use(mw...)
+
+	// 404 Handler
+	g.NoRoute(func(c *gin.Context) {
+		c.JSON(http.StatusNotFound,gin.H{
+			"code": 404,
+			"message": "not fond",
 		})
-	});
+	})
 
-	return router
+	//u := g.Group("v1")
+
+	return g
 }
