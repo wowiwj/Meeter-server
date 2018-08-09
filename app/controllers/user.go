@@ -5,7 +5,6 @@ import (
 	"fmt"
 	"github.com/gin-gonic/gin"
 	"github.com/lexkong/log"
-	"net/http"
 )
 
 type CreateRequest struct {
@@ -23,9 +22,6 @@ func UserCreate(c *gin.Context) {
 	var err error
 	if err = c.Bind(&r); err != nil {
 		response.Json(c, response.ErrBind, nil)
-		c.JSON(http.StatusOK, gin.H{
-			"error": response.ErrBind,
-		})
 		return
 	}
 
