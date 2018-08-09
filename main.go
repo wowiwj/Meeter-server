@@ -1,15 +1,15 @@
 package main
 
 import (
-	"github.com/spf13/pflag"
 	"Meeter/configs"
-	"github.com/gin-gonic/gin"
-	"github.com/spf13/viper"
-	"Meeter/router"
-	"github.com/lexkong/log"
-	"net/http"
-	"fmt"
 	"Meeter/models"
+	"Meeter/router"
+	"fmt"
+	"github.com/gin-gonic/gin"
+	"github.com/lexkong/log"
+	"github.com/spf13/pflag"
+	"github.com/spf13/viper"
+	"net/http"
 )
 
 var (
@@ -21,7 +21,7 @@ func main() {
 	pflag.Parse()
 
 	// 初始化配置
-	if err := configs.Init(*cfg);err != nil {
+	if err := configs.Init(*cfg); err != nil {
 		panic(err)
 	}
 
@@ -49,4 +49,3 @@ func main() {
 	log.Infof("Start to listening the incoming requests on http address: %s", addr)
 	log.Infof(http.ListenAndServe(addr, g).Error())
 }
-

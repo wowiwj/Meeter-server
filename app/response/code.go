@@ -1,6 +1,7 @@
 package response
 
 var (
+
 	// Common errors
 	OK                  = &ErrNo{Code: 0, Message: "OK"}
 	InternalServerError = &ErrNo{Code: 10001, Message: "Internal server error."}
