@@ -46,6 +46,8 @@ func UserCreate(c *gin.Context) {
 
 	if r.Password == "" {
 		err = fmt.Errorf("password is empty")
+		response.Json(c, err, nil)
+		return
 	}
 	rsp := CreateResponse{
 		Username: r.Username,
